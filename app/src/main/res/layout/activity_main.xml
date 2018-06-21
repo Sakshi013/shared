@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="name" />
+            android:text="@string/name" />
 
         <EditText
             android:id="@+id/name"
@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:hint="@string/enter_your_name"
             android:inputType="textPersonName" />
     </LinearLayout>
 
@@ -58,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Class" />
+            android:text="@string/class" />
 
         <EditText
             android:id="@+id/cls"
@@ -66,6 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:hint="@string/enter_phone_no"
             android:inputType="textPersonName" />
     </LinearLayout>
 
@@ -87,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Age" />
+            android:text="@string/age" />
 
         <EditText
             android:id="@+id/age"
@@ -95,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:hint="@string/enter_age"
             android:inputType="textPersonName" />
     </LinearLayout>
 
@@ -106,7 +109,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Submit"
+        android:text="@string/submit"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -134,7 +137,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="signup form"
+            android:text="@string/signup_form"
             android:textSize="25sp" />
     </LinearLayout>
 
