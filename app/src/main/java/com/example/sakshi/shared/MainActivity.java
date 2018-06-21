@@ -27,20 +27,25 @@ public class MainActivity extends AppCompatActivity {
         age = findViewById(R.id.age);
         btn = findViewById(R.id.btn);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+
+
+        btn .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (TextUtils.isEmpty(name.getText().toString())) {
-                    name.setError("Required Failed");
+//button click when filled
+                if(TextUtils.isEmpty(name.getText().toString())){
+                    name.setError("Field is  empty");
                     return;
                 }
-                    if (TextUtils.isEmpty(cls.getText().toString())) {
-                        cls.setError("Required Failed");
-                        return;
-                    }
-                        if (TextUtils.isEmpty(age.getText().toString())) {
-                            age.setError("Required Failed");
-                            return;
+
+                if(TextUtils.isEmpty(cls.getText().toString())){
+                    cls.setError("Field is empty");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(age.getText().toString())){
+                    age.setError("Field is empty");
+                    return;
                 }
 
                 String userName, userAge, userClass = null;
@@ -64,25 +69,28 @@ public class MainActivity extends AppCompatActivity {
 //                3close editor
                 editor.commit();
 
-                final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
                 builder.setTitle("Submit Conformation");
                 builder.setMessage("Are you sure?");
-                        AlertDialog.Builder builder1 = builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                                startActivity(intent);
-
-                            }
-                        });
-                 builder.setNegativeButton("no", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                        startActivity(intent);
+                    }
+                });
+                builder.setNegativeButton("no", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         finish();
                     }
-
-
                 });
+
+                builder.show();
+
             }
+        });
+
+    }
 }
