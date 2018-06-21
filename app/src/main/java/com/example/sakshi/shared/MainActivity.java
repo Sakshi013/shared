@@ -33,9 +33,11 @@ public class MainActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(name.getText().toString())) {
                     name.setError("Required Failed");
                     return;
+                }
                     if (TextUtils.isEmpty(cls.getText().toString())) {
                         cls.setError("Required Failed");
                         return;
+                    }
                         if (TextUtils.isEmpty(age.getText().toString())) {
                             age.setError("Required Failed");
                             return;
@@ -62,28 +64,25 @@ public class MainActivity extends AppCompatActivity {
 //                3close editor
                 editor.commit();
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
                 builder.setTitle("Submit Conformation");
                 builder.setMessage("Are you sure?");
-                builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                        startActivity(intent);
-                    }
-                });
-                builder.setNegativeButton("no", new DialogInterface.OnClickListener() {
+                        AlertDialog.Builder builder1 = builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                                startActivity(intent);
+
+                            }
+                        });
+                 builder.setNegativeButton("no", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         finish();
                     }
+
+
                 });
-
-                builder.show();
-
             }
-        });
-
-    }
 }
