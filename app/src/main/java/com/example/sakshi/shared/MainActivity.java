@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    EditText name, cls, age;
+    EditText name, mail, pswd;
     Button btn;
 
 
@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         name = findViewById(R.id.name);
-        cls = findViewById(R.id.cls);
-        age = findViewById(R.id.age);
+        mail = findViewById(R.id.mail);
+        pswd = findViewById(R.id.pswd);
         btn = findViewById(R.id.btn);
 
 
@@ -38,21 +38,21 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                if(TextUtils.isEmpty(cls.getText().toString())){
-                    cls.setError("Field is empty");
+                if(TextUtils.isEmpty(mail.getText().toString())){
+                    mail.setError("Field is empty");
                     return;
                 }
 
-                if(TextUtils.isEmpty(age.getText().toString())){
-                    age.setError("Field is empty");
+                if(TextUtils.isEmpty(pswd.getText().toString())){
+                    pswd.setError("Field is empty");
                     return;
                 }
 
-                String userName, userAge, userClass = null;
+                String userName, userpswd, usermail = null;
 
                 userName = name.getText().toString();
-                userClass = cls.getText().toString();
-                userAge = age.getText().toString();
+                usermail = mail.getText().toString();
+                userpswd = pswd.getText().toString();
 
 //                entering data
 
@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sp.edit();
 
                 editor.putString("name", userName);
-                editor.putString("class", userClass);
-                editor.putString("age", userAge);
+                editor.putString("class", usermail);
+                editor.putString("age", userpswd);
 
 //                3close editor
                 editor.commit();

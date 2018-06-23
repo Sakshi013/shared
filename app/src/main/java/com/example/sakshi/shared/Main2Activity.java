@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class Main2Activity extends AppCompatActivity {
 
     TextView Hello,yes,No;
-    String userName,userAge,userClass;
+    String userName,usermail,userpswd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +27,12 @@ public class Main2Activity extends AppCompatActivity {
         SharedPreferences sp = getSharedPreferences("detail",MODE_PRIVATE);
 
         userName = sp.getString("name","none");
-        userClass = sp.getString("class","none");
-        userAge = sp.getString("age","none");
+        usermail = sp.getString("mail","none");
+        userpswd = sp.getString("pswd","none");
 
 //        set the value to textView
         Hello.setText(userName);
-        yes.setText(userAge);
+        yes.setText(userpswd);
         No.setText(userName);
 
 

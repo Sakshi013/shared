@@ -11,4 +11,15 @@
     <string name="hello">Hello</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="name">name</string>
+    <string name="enter_your_name">enter your name</string>
+    <string name="phone">phone</string>
+    <string name="e_mail">E-mail</string>
+    <string name="enter_your_e_mail">enter your E-mail</string>
+    <string name="enter_password">enter password</string>
+    <string name="password">password</string>
+    <string name="password">password</string>
+    <string name="state">state</string>
+    <string name="city">city</string>
+    <string name="enter_city">enter city</string>
 </resources>
